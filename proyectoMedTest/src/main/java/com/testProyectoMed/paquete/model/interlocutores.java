@@ -9,10 +9,20 @@ import javax.persistence.Table;
 @Table(name = "interlocutores") 
 public class interlocutores {
 
+public interlocutores() {
+	// TODO Auto-generated constructor stub
+}
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private int id_interlocutor;
 
+public int getId_interlocutor() {
+	return id_interlocutor;
+}
+
+public void setId_interlocutor(int id_interlocutor) {
+	this.id_interlocutor = id_interlocutor;
+}
 private int tipo_interlocutor;
 
 private int id_externo;
@@ -35,14 +45,16 @@ private  String fecha_creacion;
 
 private  boolean estado;
 
-private  String direccion_id;
+private  int direccion_id;
 
 
 
-public interlocutores(int tipo_interlocutor, int id_externo, String tipo_identificacion, int identificacion,
-		String nombre1, String nombre2, String apellido1, String apellido2, String comentarios, String fecha_creacion,
-		boolean estado, String direccion_id) {
+
+public interlocutores(int id_interlocutor, int tipo_interlocutor, int id_externo, String tipo_identificacion,
+		int identificacion, String nombre1, String nombre2, String apellido1, String apellido2, String comentarios,
+		String fecha_creacion, boolean estado, int direccion_id) {
 	super();
+	this.id_interlocutor = id_interlocutor;
 	this.tipo_interlocutor = tipo_interlocutor;
 	this.id_externo = id_externo;
 	this.tipo_identificacion = tipo_identificacion;
@@ -145,13 +157,14 @@ public void setEstado(boolean estado) {
 	this.estado = estado;
 }
 
-public String getDireccion_id() {
+public int getDireccion_id() {
 	return direccion_id;
 }
 
-public void setDireccion_id(String direccion_id) {
+public void setDireccion_id(int direccion_id) {
 	this.direccion_id = direccion_id;
 }
+
 
 
 

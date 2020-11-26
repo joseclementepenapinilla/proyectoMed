@@ -7,6 +7,5 @@ import com.testProyectoMed.paquete.model.*;
 
 @Repository
 public interface interfaceDirecciones extends CrudRepository<direcciones, Integer > {
-
 	
 }

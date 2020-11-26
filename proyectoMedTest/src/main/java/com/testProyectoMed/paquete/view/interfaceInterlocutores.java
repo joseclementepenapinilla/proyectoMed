@@ -1,4 +1,4 @@
-package com.testProyectoMed.paquete.view;
+ package com.testProyectoMed.paquete.view;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

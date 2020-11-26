@@ -12,6 +12,10 @@ import javax.persistence.Table;
 @Table(name = "direcciones") 
 public class direcciones {
 
+	public direcciones() {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private  int id_direccion;

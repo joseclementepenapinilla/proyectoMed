@@ -1,8 +1,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
-<head></head>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
 <body>
 
-<table>
+<div class="col mt-4">
+<a th:href="@{/registrarDir}">nuevo</a>
+<table class="table">
 <tr>
 <th>ID DIRECCION</th>
 <th>PAIS</th>
@@ -14,18 +19,20 @@
 <th>ELIMINAR</th>
 </tr>
 <tr th:each="info:${direcciones}">
-<td>${info.id_direccion}</td>
-<td>${info.pais}</td>
-<td>${info.departamento}</td>
-<td>${info.ciudad}</td>
-<td>${info.direccion}</td>
-<td>${info.estado}</td>
-<td><button>EDITAR</button></td>
-<td><button>ELIMINAR</button></td>
+<td th:text="${info.id_direccion}"></td>
+<td th:text="${info.pais}"></td>
+<td th:text="${info.departamento}"></td>
+<td th:text="${info.ciudad}"></td>
+<td th:text="${info.direccion}"></td>
+<td th:text="${info.estado}"></td>
+<td><a class="btn btn-danger" th:href="@{/actualizar/direccion/}+${info.id_direccion}">EDITAR</a></td>
+<td><a class="btn btn-primary" th:onclick="eliminarConfirma('inter',[[${info.id_direccion}]])">ELIMINAR</a></td>  
 </tr>
 
 </table>
 
-
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="loader.js"></script>
 </body>
 </html>
