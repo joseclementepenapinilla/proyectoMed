@@ -1,0 +1,31 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+
+<table>
+<tr>
+<th>ID DIRECCION</th>
+<th>PAIS</th>
+<th>DEPARTAMENTO</th>
+<th>CIUDAD</th>
+<th>DIRECCION</th>
+<th>ESTADO</th>
+<th>EDITAR</th>
+<th>ELIMINAR</th>
+</tr>
+<tr th:each="info:${direcciones}">
+<td>${info.id_direccion}</td>
+<td>${info.pais}</td>
+<td>${info.departamento}</td>
+<td>${info.ciudad}</td>
+<td>${info.direccion}</td>
+<td>${info.estado}</td>
+<td><button>EDITAR</button></td>
+<td><button>ELIMINAR</button></td>
+</tr>
+
+</table>
+
+
+</body>
+</html>

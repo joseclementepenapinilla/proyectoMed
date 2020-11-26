@@ -1,0 +1,60 @@
+<HTML xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+<form>
+
+<table>
+<thead>
+<tr>
+<th>id interlocutor</th>
+<th>tipo interlocutor</th>
+<th>id externo</th>
+<th>tipo identificacion </th>
+<th>identificacion</th>
+<th>nombre1</th>
+<th>nombre2</th>
+<th>apellido1</th>
+<th>apellido2</th>
+<th>comentarios</th>
+<th>fecha_creacion</th>
+<th>estado</th>
+<th>DIRECCION</th>
+<TH>EDITAR</TH>
+<TH>ELIMINAR</TH>
+</tr>
+</thead>
+<tbody>
+
+<tr th:each="info:${interlocutores}">
+<td>${info.id_interlocutor}</td>
+<td>${info.tipo_interlocutor}</td>
+<td>${info.id_externo}</td>
+<td>${info.tipo_identificacion}</td>
+<td>${info.identificacion}</td>
+<td>${info.nombre1}</td>
+<td>${info.nombre2}</td>
+<td>${info.apellido1}</td>
+<td>${info.apellido2}</td>
+<td>${info.comentarios}</td>
+<td>${info.fecha_creacion}</td>
+<td>${info.estado}</td>
+<td>${info.direccion_id}</td>
+
+<td><button>EDITAR</button></td>
+<td><button>ELIMINAR</button></td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+
+
+</form>
+</body>
+
+
+</HTML>
