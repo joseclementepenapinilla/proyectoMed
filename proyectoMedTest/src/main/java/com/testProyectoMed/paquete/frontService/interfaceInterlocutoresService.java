@@ -9,7 +9,7 @@ public interface interfaceInterlocutoresService {
 	public List<interlocutores>consultar();
 	public int guardar(interlocutores Il);
 	public void eliminar(int id_interlocutor);
-	public Optional<direcciones>consultarDireccion(int id_interlocutor);
+	public Optional<direcciones>consultarInterlocutor(int id_interlocutor);
 
 
 }

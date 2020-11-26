@@ -34,10 +34,11 @@ public class interlocutorService implements interfaceInterlocutoresService{
 	}
 
 	@Override
-	public Optional<interlocutores> consultarInterlocutor(int id_interlocutor) {
+	public Optional<direcciones> consultarInterlocutor(int id_interlocutor) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	
 
 }
